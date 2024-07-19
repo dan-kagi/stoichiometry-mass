@@ -1,0 +1,133 @@
+body {
+  width: 100%;
+  background-color: greenyellow;
+  box-sizing: border-box;
+  margin: 0px;
+  font-size: 1rem;
+}
+
+header {
+  margin-top: 0px;
+  background-color: green;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+header button {
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+#instruction {
+  text-align: center;
+}
+
+header h1 {
+  margin: 0px;
+}
+header img {
+  width: 70px;
+}
+
+#instruction {
+  text-align: center;
+}
+
+.balanceamento input {
+  width: 16px;
+  font-size: 0.9rem;
+}
+
+.stoichiometry input {
+  width: 60px;
+}
+
+main {
+  width: 98%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 5px;
+  padding: 2px;
+  width: 45%;
+  border: 3px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  margin: 10px;
+}
+
+.balanceamento {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.balanceamento,
+.stoichiometry {
+  text-align: center;
+}
+
+.stoichiometry {
+  margin: 10px;
+  padding: 5px;
+  background-color: rgb(43, 226, 162);
+  border-radius: 10px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.answer {
+  margin: 10px;
+}
+
+label {
+  margin: 2px;
+}
+
+.buttonStyle {
+  background-color: blue;
+  color: white;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.buttonStyle2 {
+  background-color: #ff4191;
+  color: white;
+  border: 1px solid #ff4191;
+  border-radius: 5px;
+}
+
+.balanceamento div {
+  margin: 10px;
+}
+
+@media (max-width: 900px) {
+  .card {
+    width: 98%;
+  }
+  #exerciseType {
+    font-size: 1rem;
+  }
+}
+
+footer {
+  text-align: center;
+}
