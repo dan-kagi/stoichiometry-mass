@@ -217,6 +217,124 @@ const questions = [
     ],
     isBalanced: false,
   },
+  {
+    id: 9,
+    question:
+      'Calcule as massas de gás nitrogênio e de gás hidrogênio , em Kg, necessárias para produção de 10,2 Kg de amônia. Dados: H = 1u e N = 14u, 1 Kg - 1000 g.',
+    substances: [
+      {
+        reagents: [
+          { name: 'nitrogenGas', formula: 'N2(g)', coef: 1 },
+          { name: 'hydrogenGas', formula: 'H2(g)', coef: 3 },
+        ],
+      },
+      {
+        products: [{ name: 'ammonia', formula: 'NH3(g)', coef: 2 }],
+      },
+    ],
+    coefs: [1, 3, 2],
+    asking: [
+      {
+        name: 'nitrogenGas',
+        substance: 'N2',
+        answer: 8.4,
+        unit: 'quilogramas',
+      },
+      {
+        name: 'hydrogenGas',
+        substance: 'H2',
+        answer: 1.8,
+        unit: 'quilogramas',
+      },
+    ],
+    isBalanced: false,
+  },
+  {
+    id: 10,
+    question:
+      'O fósforo reage com o oxigênio molecular de acordo com a equação abaixo. Qual é a massa de gás oxigênio necessária para reagir com 6,2 g de fósforo. Dados: O = 16u e P = 31u.',
+    substances: [
+      {
+        reagents: [
+          { name: 'phosphorus', formula: 'P(s)', coef: 4 },
+          { name: 'oxygen', formula: 'O2(g)', coef: 5 },
+        ],
+      },
+      {
+        products: [
+          { name: 'phosphorusPentoxide', formula: 'P4O10(s)', coef: 1 },
+        ],
+      },
+    ],
+    coefs: [4, 5, 1],
+    asking: [
+      {
+        name: 'oxygen',
+        substance: 'O2',
+        answer: 8.0,
+        unit: 'gramas',
+      },
+    ],
+    isBalanced: false,
+  },
+  {
+    id: 11,
+    question:
+      '(Rendimento) O silício é utilizado na produção de ligas metálicas, na preparação de silicones, na indústria cerâmica e, em especial, na indústria eletrônica e microeletrônica. É material básico na produção de transistores para chips, células solares e outros tipos de circuitos eletrônicos. O silício puro pode ser obtido por meio da reação abaixo. Na reação de 510 g de tetracloreto de silício, foram obtidos 58,8g de silício. Calcule o rendimento porcentual deste processo. Dados: Massa Molar do tetracloreto de silício = 170 g / mol; Massa molar do silício = 28 g / mol.',
+    substances: [
+      {
+        reagents: [
+          { name: 'siliciumChloride', formula: 'SiCl4(s)', coef: 1 },
+          { name: 'magnesium', formula: 'Mg(s)', coef: 2 },
+        ],
+      },
+      {
+        products: [
+          { name: 'silicium', formula: 'Si(s)', coef: 1 },
+          { name: 'magnesiumChloride', formula: 'MgCl2(s)', coef: 2 },
+        ],
+      },
+    ],
+    coefs: [1, 2, 1, 2],
+    asking: [
+      {
+        name: 'siliciumYield',
+        substance: 'rendimento',
+        answer: 70.0,
+        unit: '%',
+      },
+    ],
+    isBalanced: false,
+  },
+  {
+    id: 12,
+    question:
+      '(Rendimento) Na metalurgia, o alumínio pode ser obtido segundo a equação química abaixo. Em um experimento, a partir da reação de 20,4 g de óxido de alumínio foram obtidos 6,48 g de alumínio. Determine o rendimento porcentual. Dados: Massa Molar do óxido de alumínio = 102 g / mol; Massa Molar do alumínio = 27 g / mol.',
+    substances: [
+      {
+        reagents: [
+          { name: 'aluminumOxide', formula: 'Al2O3(s)', coef: 2 },
+          { name: 'carbon', formula: 'C(s)', coef: 3 },
+        ],
+      },
+      {
+        products: [
+          { name: 'carbonDioxide', formula: 'CO2(g))', coef: 3 },
+          { name: 'aluminum', formula: 'Al(s)', coef: 4 },
+        ],
+      },
+    ],
+    coefs: [2, 3, 3, 4],
+    asking: [
+      {
+        name: 'aluminumYield',
+        substance: 'rendimento',
+        answer: 60.0,
+        unit: '%',
+      },
+    ],
+    isBalanced: false,
+  },
 ];
 
 function createCard(question) {
@@ -323,11 +441,7 @@ function createCard(question) {
     label.innerHTML = changeToSubscript(question.asking[i].substance) + ':';
     const input = document.createElement('input');
     input.setAttribute('name', question.asking[i].name);
-    let unit = 'gramas';
-    if (question.asking[i].unit === 'mol') {
-      unit = 'mol';
-    }
-    input.setAttribute('placeholder', unit);
+    input.setAttribute('placeholder', question.asking[i].unit);
     answer.appendChild(label);
     answer.appendChild(input);
     stoichForm.appendChild(answer);
