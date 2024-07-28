@@ -147,7 +147,7 @@ const questions = [
       {
         name: 'hydrochloricAcid',
         substance: 'HCl',
-        answer: 0.0365,
+        answer: 0.146,
         unit: 'gramas',
       },
     ],
